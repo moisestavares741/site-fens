@@ -1,0 +1,191 @@
+/* --- ESTILOS GERAIS E RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f4f4f4; /* Um fundo suave para a página */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+header {
+  background: rgb(8, 8, 59);
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky; /* Fixa o menu no topo ao rolar */
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  height: 70px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: blanchedalmond;
+  padding: 16px 24px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgb(20, 20, 80);
+}
+
+/* Adiciona um destaque para a página ativa */
+nav ul li a.active {
+  background: rgb(25, 25, 95);
+  font-weight: bold;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+  padding: 2rem 0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: rgb(8, 8, 59);
+}
+
+.section {
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: rgb(8, 8, 59);
+  margin-bottom: 1rem;
+}
+
+/* --- PÁGINA INICIAL (HOME) --- */
+.hero img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.summary-link {
+  display: inline-block;
+  background: rgb(8, 8, 59);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.summary-link:hover {
+  background: rgb(20, 20, 80);
+}
+
+/* --- PÁGINA QUEM SOMOS --- */
+.quem-somos-content img {
+  max-width: 500px;
+  width: 100%;
+  display: block;
+  margin: 20px auto; /* Centraliza a imagem */
+  border-radius: 8px;
+}
+
+/* --- PÁGINA HORÁRIOS --- */
+.culto-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.culto-item:last-child {
+  border-bottom: none;
+}
+
+.culto-item h3 {
+  color: rgb(20, 20, 80);
+}
+
+/* --- PÁGINA CONTATO --- */
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info strong {
+  color: rgb(8, 8, 59);
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* Proporção 16:9 para o mapa */
+  margin-top: 2rem;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- RODAPÉ --- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: rgb(8, 8, 59);
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* --- AJUSTES PARA CELULAR (RESPONSIVO) --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
